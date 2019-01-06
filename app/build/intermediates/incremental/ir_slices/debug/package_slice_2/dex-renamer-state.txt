@@ -1,0 +1,4 @@
+#Sat Jan 05 18:58:44 IRST 2019
+base.0=E\:\\project\\Daneshgahazad\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+renamed.0=classes.dex
+path.0=classes.dex
