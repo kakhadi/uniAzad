@@ -11,7 +11,7 @@ import java.io.File;
 
 public class loadProfile {
     private static String DB_NAME = "azad.db3";
-    public void all(MainActivity context,TextView txtName ,TextView txtMaqtae , TextView txtReshte){
+    public void all(Context context,TextView txtName ,TextView txtMaqtae , TextView txtReshte){
         //imgProfile.set
         TestAdapter mDbHelper = new TestAdapter(context);
         mDbHelper.createDatabase();

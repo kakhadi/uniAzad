@@ -147,7 +147,6 @@
 
             <TextView
                 android:id="@+id/reshteMeno"
-
                 style="@style/AudioFileInfoOverlayText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

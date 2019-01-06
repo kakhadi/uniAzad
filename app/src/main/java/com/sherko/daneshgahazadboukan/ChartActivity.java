@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.io.File;
 public class ChartActivity extends AppCompatActivity {
@@ -30,6 +31,11 @@ public class ChartActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
+        loadProfile loadProfile =new loadProfile();
+        TextView textView = findViewById(R.id.nameMeno);
+        TextView textView1 =findViewById(R.id.maqtaeMeno);
+        TextView textView2 =findViewById(R.id.reshteMeno);
+        loadProfile.all(this,textView,textView1,textView2);
         ImageView imageView = findViewById(R.id.imgProfile);
 
         WebView webView = findViewById(R.id.webpdf);
