@@ -892,6 +892,8 @@ mipmap me
 mipmap menu
 mipmap nav_avatar
 mipmap nav_back
+mipmap nochart
+mipmap nonet
 string Aboutme
 string HeaderText
 string LoginConfirm

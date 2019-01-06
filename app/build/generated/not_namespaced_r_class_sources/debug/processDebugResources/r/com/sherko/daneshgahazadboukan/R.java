@@ -3678,6 +3678,8 @@ public final class R {
     public static final int menu=0x7f0b0009;
     public static final int nav_avatar=0x7f0b000a;
     public static final int nav_back=0x7f0b000b;
+    public static final int nochart=0x7f0b000c;
+    public static final int nonet=0x7f0b000d;
   }
   public static final class string {
     public static final int Aboutme=0x7f0c0000;
