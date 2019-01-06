@@ -11,7 +11,7 @@ import java.io.File;
 
 public class loadProfile {
     private static String DB_NAME = "azad.db3";
-    public void all(Context context,TextView txtName ,TextView txtMaqtae , TextView txtReshte){
+    public void all(MainActivity context,TextView txtName ,TextView txtMaqtae , TextView txtReshte){
         //imgProfile.set
         TestAdapter mDbHelper = new TestAdapter(context);
         mDbHelper.createDatabase();
@@ -21,7 +21,33 @@ public class loadProfile {
             Cursor C;
             C=mDbHelper.getTestData("select * from login");
             txtName.setText(C.getString(1)+" "+C.getString(2));
-            txtMaqtae.setText(C.getString(4));
+
+            switch (Integer.parseInt(C.getString(4))){
+                case 0:{
+                    txtMaqtae.setText("دکترا");
+                    break;
+                }
+                case 1:{
+                    txtMaqtae.setText("کارشناسی ارشد");
+                    break;
+                }
+                case 2:{
+                    txtMaqtae.setText("کارشناسی پیوسته");
+                    break;
+                }
+                case 3:{
+                    txtMaqtae.setText("کارشناسی ناپیوسته");
+                    break;
+                }
+                case 4:{
+                    txtMaqtae.setText("کاردانی پیوسته");
+                    break;
+                }
+                case 5:{
+                    txtMaqtae.setText("کاردانی ناپیوسته");
+                    break;
+                }
+            }
             C=mDbHelper.getTestData("select * from reshte where id="+C.getString(5));
             txtReshte.setText(C.getString(1));
             mDbHelper.close();
@@ -34,7 +60,5 @@ public class loadProfile {
         }
     }
 
-    public void all(MainActivity context, View viewById, View viewById1, View viewById2) {
 
-    }
 }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         loadProfile loadProfile =new loadProfile();
-        loadProfile.all(this,findViewById(R.id.nameMeno),findViewById(R.id.maqtaeMeno),findViewById(R.id.reshteMeno));
+        TextView textView = findViewById(R.id.nameMeno);
+        TextView textView1 =findViewById(R.id.maqtaeMeno);
+        TextView textView2 =findViewById(R.id.reshteMeno);
+        loadProfile.all(this,textView,textView1,textView2);
     }
     public void clkBarnama(View view){
         Intent barname = new Intent(MainActivity.this , BarnameActivity.class);
