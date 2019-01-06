@@ -891,6 +891,8 @@ int mipmap me 0x7f0b0008
 int mipmap menu 0x7f0b0009
 int mipmap nav_avatar 0x7f0b000a
 int mipmap nav_back 0x7f0b000b
+int mipmap nochart 0x7f0b000c
+int mipmap nonet 0x7f0b000d
 int string Aboutme 0x7f0c0000
 int string HeaderText 0x7f0c0001
 int string LoginConfirm 0x7f0c0002
