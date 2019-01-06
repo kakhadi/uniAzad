@@ -134,6 +134,7 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                         spinnerreshte.setAdapter(dataAdapter2);
                         spinnerreshte.setOnItemSelectedListener(this);
                         mDbHelper.close();
+                        strMaqta="0";
                     } else {
                         File dir = new File(db.getParent());
                         if (!dir.exists()) {
@@ -166,6 +167,7 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                         spinnerreshte.setAdapter(dataAdapter2);
                         spinnerreshte.setOnItemSelectedListener(this);
                         mDbHelper.close();
+                        strMaqta="1";
                     } else {
                         File dir = new File(db.getParent());
                         if (!dir.exists()) {
@@ -198,6 +200,7 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                         spinnerreshte.setAdapter(dataAdapter);
                         spinnerreshte.setOnItemSelectedListener(this);
                         mDbHelper.close();
+                        strMaqta="2";
                     } else {
                         File dir = new File(db.getParent());
                         if (!dir.exists()) {
@@ -230,6 +233,7 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                         spinnerreshte.setAdapter(dataAdapter);
                         spinnerreshte.setOnItemSelectedListener(this);
                         mDbHelper.close();
+                        strMaqta="3";
                     } else {
                         File dir = new File(db.getParent());
                         if (!dir.exists()) {
@@ -241,7 +245,6 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                     // Whatever you want to happen when the first item gets selected
                     break;
                 }
-
                 case 4: {
                     List<String> reshta = new ArrayList<String>();
                     TestAdapter mDbHelper = new TestAdapter(this);
@@ -263,6 +266,7 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                         spinnerreshte.setAdapter(dataAdapter);
                         spinnerreshte.setOnItemSelectedListener(this);
                         mDbHelper.close();
+                        strMaqta="4";
                     } else {
                         File dir = new File(db.getParent());
                         if (!dir.exists()) {
@@ -295,6 +299,7 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                         spinnerreshte.setAdapter(dataAdapter);
                         spinnerreshte.setOnItemSelectedListener(this);
                         mDbHelper.close();
+                        strMaqta="5";
                     } else {
                         File dir = new File(db.getParent());
                         if (!dir.exists()) {
@@ -306,10 +311,8 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
                     // Whatever you want to happen when the first item gets selected
                     break;
                 }
-
-
             }
-            strMaqta = parent.getItemAtPosition(position).toString();
+            //strMaqta = parent.getItemAtPosition(position).toString();
         }else{
             TestAdapter mDbHelper = new TestAdapter(this);
             mDbHelper.createDatabase();

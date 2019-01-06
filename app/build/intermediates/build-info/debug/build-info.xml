@@ -2,110 +2,84 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="26"
-    build-mode="FULL"
-    density="xxhdpi"
+    build-mode="COLD"
+    density="420dpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1546787649490"
-    token="-8189060701780315982"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="1546791571244"
+    token="-1645542726417389982"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="759" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="190" />
+        duration="276" />
     <task
         name="verifier"
-        duration="665" />
+        duration="20" />
 
     <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
         type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1546787649490"
+        timestamp="1546790771937"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\sherko\Desktop\uniAzad\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="E:\project\git\uniAzad\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1546791571244"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="E:\project\git\uniAzad\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

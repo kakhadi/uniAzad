@@ -10,13 +10,10 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Toast;
 import java.io.File;
-
 public class ChartActivity extends AppCompatActivity {
     private static String DB_NAME = "azad.db3";
     DrawerLayout drawerLayout;
-    Integer pageNumber = 0;
-    String pdfFileName;
-
+    String strPdfUrl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +34,36 @@ public class ChartActivity extends AppCompatActivity {
         File db = new File(this.getDatabasePath(DB_NAME).getPath());
         if (db.exists()) {
             mDbHelper.open();
-            //Cursor C;
-            mDbHelper.getTestData("select * from login");
-            //C = mDbHelper.getTestData("select * from reshte where ");
-            // mDbHelper.UpdateTest("INSERT INTO login (id,name,lastname,phone,maqta,reshte) VALUES ("+String.valueOf(C.getCount()+1) +",'"+ fn.getText()+"' ,'" +fln.getText() + "' ,'"+fph.getText() +"','"+strMaqta+"','"+String.valueOf(strIdReshta)+"')");
+            Cursor C;
+            C=mDbHelper.getTestData("select * from login");
+            int intCasePdfChart = Integer.parseInt(C.getString(4));
+            C = mDbHelper.getTestData("select * from reshte where id=" + C.getString(5));
+            switch (intCasePdfChart){
+                case 0:{
+                    strPdfUrl =C.getString(8);
+                    break;
+                }
+                case 1:{
+                    strPdfUrl = C.getString(9);
+                    break;
+                }
+                case 2:{
+                    strPdfUrl = C.getString(11);
+                    break;
+                }
+                case 3:{
+                    strPdfUrl = C.getString(10);
+                    break;
+                }
+                case 4:{
+                    strPdfUrl = C.getString(12);
+                    break;
+                }
+                case 5:{
+                    strPdfUrl = C.getString(13);
+                    break;
+                }
+            }
             mDbHelper.close();
         } else {
             File dir = new File(db.getParent());
@@ -49,10 +72,8 @@ public class ChartActivity extends AppCompatActivity {
             }
             Toast.makeText(this, "مشکل اتصال دیتابیس", Toast.LENGTH_LONG).show();
         }
-
-
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://docs.google.com/viewer?url=");
+        webView.loadUrl("https://docs.google.com/viewer?url="+strPdfUrl);
 
     }
 }
