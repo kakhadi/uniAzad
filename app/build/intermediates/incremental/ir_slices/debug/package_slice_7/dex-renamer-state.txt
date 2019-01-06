@@ -1,4 +1,4 @@
-#Sun Jan 06 19:49:35 IRST 2019
+#Sun Jan 06 20:59:25 IRST 2019
 base.0=E\:\\project\\git\\uniAzad\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
 renamed.0=classes.dex
 path.0=classes.dex

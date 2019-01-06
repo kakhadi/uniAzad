@@ -113,6 +113,7 @@
             android:orientation="vertical">
 
             <Button
+                android:onClick="clkBarnama"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -120,9 +121,10 @@
                 android:fontFamily="@font/irsans_m"
                 android:text="بــــرنـــامـــــه ی کـــــــلاســـی"
                 android:textColor="#1d1d1d"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold"/>
 
             <Button
+                android:onClick="clkChart"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -130,9 +132,10 @@
                 android:fontFamily="@font/irsans_m"
                 android:text="چـــــــــــــارت درســـــــــــــی"
                 android:textColor="#1d1d1d"
-                android:textStyle="bold"></Button>
+                android:textStyle="bold" />
 
             <Button
+                android:onClick="clkPhone"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -153,6 +156,7 @@
                 android:textStyle="bold"></Button>
 
             <Button
+                android:onClick="clkHeyat"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -163,6 +167,7 @@
                 android:textStyle="bold"></Button>
 
             <Button
+                android:onClick="clkAbout"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

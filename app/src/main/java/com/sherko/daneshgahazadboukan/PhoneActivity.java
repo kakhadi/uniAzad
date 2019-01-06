@@ -1,5 +1,6 @@
 package com.sherko.daneshgahazadboukan;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,5 +28,23 @@ public class PhoneActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void clkBarnama(View view){
+        Intent barname = new Intent(this , BarnameActivity.class);
+        startActivity(barname);
+    }
+    public void clkChart(View view){
+        Intent chart = new Intent(this , ChartActivity.class);
+        startActivity(chart);
+    }
+    public void clkPhone(View view){
+        Intent phone = new Intent(this , PhoneActivity.class);
+        startActivity(phone);
+    }
+    public void clkAbout(View view){
+        Intent about = new Intent(this , AboutUsActivity.class);
+        startActivity(about);
+    }
+    public void clkHeyat(View view){
     }
 }

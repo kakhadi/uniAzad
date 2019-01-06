@@ -1,5 +1,6 @@
 package com.sherko.daneshgahazadboukan;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.Toast;
 import java.io.File;
 public class ChartActivity extends AppCompatActivity {
@@ -28,6 +30,8 @@ public class ChartActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
+        ImageView imageView = findViewById(R.id.imgProfile);
+
         WebView webView = findViewById(R.id.webpdf);
         TestAdapter mDbHelper = new TestAdapter(this);
         mDbHelper.createDatabase();
@@ -75,5 +79,23 @@ public class ChartActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("https://docs.google.com/viewer?url="+strPdfUrl);
 
+    }
+    public void clkBarnama(View view){
+        Intent barname = new Intent(this , BarnameActivity.class);
+        startActivity(barname);
+    }
+    public void clkChart(View view){
+        Intent chart = new Intent(this , ChartActivity.class);
+        startActivity(chart);
+    }
+    public void clkPhone(View view){
+        Intent phone = new Intent(this , PhoneActivity.class);
+        startActivity(phone);
+    }
+    public void clkAbout(View view){
+        Intent about = new Intent(this , AboutUsActivity.class);
+        startActivity(about);
+    }
+    public void clkHeyat(View view){
     }
 }

@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
+        loadProfile loadProfile =new loadProfile();
+        loadProfile.all(this,findViewById(R.id.nameMeno),findViewById(R.id.maqtaeMeno),findViewById(R.id.reshteMeno));
     }
     public void clkBarnama(View view){
         Intent barname = new Intent(MainActivity.this , BarnameActivity.class);
