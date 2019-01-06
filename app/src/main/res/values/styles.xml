@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="AudioFileInfoOverlayText">
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:shadowColor">#64000000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+</resources>

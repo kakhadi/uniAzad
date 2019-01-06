@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackground"
+    android:orientation="vertical"
+    tools:context=".LoginFormActivity">
+
+    <!--MainLinear-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/loginstyle"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/irsans_b"
+            android:text="@string/LoginForm"
+            android:textColor="@color/TextColorWhite"
+            android:textSize="17sp" />
+
+        <!--name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EditName"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="6"
+                android:background="#50ffffff"
+                android:fontFamily="@font/irsans_l"
+                android:hint="@string/LoginNameHint"
+                android:paddingRight="15dp"
+                android:textColorHint="@color/TextColorWhite"
+                android:textDirection="rtl"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/irsans_l"
+                android:text="@string/LoginName"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--Last name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EditLname"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="6"
+                android:background="#50ffffff"
+                android:fontFamily="@font/irsans_l"
+                android:hint="@string/LoginLNameHint"
+                android:paddingRight="15dp"
+                android:textColorHint="@color/TextColorWhite"
+                android:textDirection="rtl"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/irsans_l"
+                android:text="@string/LoginLName"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--Phone-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EditPhone"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="6"
+                android:background="#50ffffff"
+                android:fontFamily="@font/irsans_l"
+                android:hint="@string/LoginPhoneHint"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:textColorHint="@color/TextColorWhite"
+                android:textDirection="rtl"
+                android:textSize="13sp"
+                android:ems="10"
+                android:maxLength="11"
+                android:inputType="phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/irsans_l"
+                android:text="@string/LoginPhone"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+        <!--Maqta-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/LoginSpinner"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/irsans_l"
+                android:text="@string/LoginMaqta"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--reshte-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/LoginSpinner2"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/irsans_l"
+                android:text="@string/LoginReshte"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="#50ffffff"
+            android:fontFamily="@font/irsans_b"
+            android:onClick="onBtnSaveClick"
+            android:text="@string/LoginConfirm"
+            android:textColor="@color/TextColorWhite" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

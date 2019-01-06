@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/DrawerView">
+
+
+    <!--Main-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Header-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/AppFirstColor"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/irsans_b"
+                android:text="@string/HeaderText"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/DrawerBtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/menu" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/BtnBarname"
+                android:layout_width="200dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="20dp"
+                android:onClick="clkBarnama"
+                android:background="@mipmap/barname" />
+
+            <ImageView
+                android:onClick="clkChart"
+                android:id="@+id/BtnChart"
+                android:layout_width="200dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/chart" />
+
+            <ImageView
+                android:onClick="clkPhone"
+                android:id="@+id/BtnPhone"
+                android:layout_width="200dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/daftarche" />
+
+
+            <ImageView
+                android:onClick="clkHeyat"
+                android:layout_width="200dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/heyatelmi" />
+
+            <ImageView
+                android:onClick="clkAbout"
+                android:id="@+id/BtnAboutUs"
+                android:layout_width="200dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/aboutus" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--Drawer-->
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/AppBackground"
+        android:orientation="vertical">
+
+        <!--Header-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@mipmap/nav_back"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/nav_avatar"
+                android:elevation="15dp" />
+
+
+            <TextView
+                android:id="@+id/nameMeno"
+                style="@style/AudioFileInfoOverlayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/irsans_b"
+                android:text="شیرکو فرجی"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/maqtaeMeno"
+                style="@style/AudioFileInfoOverlayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/irsans_m"
+                android:text="کارشناسی ناپیوسته"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/reshteMeno"
+
+                style="@style/AudioFileInfoOverlayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/irsans_m"
+                android:text="مهندسی تکنولوژی نرم افزار کامپیوتر"
+                android:textColor="@color/TextColorWhite"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+        <!--bouttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <Button
+                android:onClick="clkBarnama"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#d7d5d5"
+                android:fontFamily="@font/irsans_m"
+                android:text="بــــرنـــامـــــه ی کـــــــلاســـی"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold"/>
+
+            <Button
+                android:onClick="clkChart"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/AppBackground"
+                android:fontFamily="@font/irsans_m"
+                android:text="چـــــــــــــارت درســـــــــــــی"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold" />
+
+            <Button
+                android:onClick="clkPhone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/AppBackground"
+                android:fontFamily="@font/irsans_m"
+                android:text="دفـــــتــــرچــــه تــــلــــفــــن"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold"></Button>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/AppBackground"
+                android:fontFamily="@font/irsans_m"
+                android:text="لــــیـــــســـــت اســـاتــــیــــد"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold"></Button>
+
+            <Button
+                android:onClick="clkHeyat"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/AppBackground"
+                android:fontFamily="@font/irsans_m"
+                android:text="اعـــضـــای هــیــئــت عــلــمــی"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold"></Button>
+
+            <Button
+                android:onClick="clkAbout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/AppBackground"
+                android:fontFamily="@font/irsans_m"
+                android:text="درباره ی ما"
+                android:textColor="#1d1d1d"
+                android:textStyle="bold"></Button>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

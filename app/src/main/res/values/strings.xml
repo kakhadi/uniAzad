@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DaneshgahAzadBoukan</string>
+    <string name="HeaderText">دانشگاه آزاد اسلامی واحد بوکان</string>
+    <string name="LoginForm">فرم ثبت نام</string>
+    <string name="LoginName">نام : </string>
+    <string name="LoginNameHint">نام خود را وارد کنید</string>
+    <string name="LoginLName">نام خانوادگی : </string>
+    <string name="LoginLNameHint">نام خانوادگی خود را وارد کنید</string>
+    <string name="LoginPhone">شماره موبایل : </string>
+    <string name="LoginPhoneHint">شماره موبایل خود را وارد کنید</string>
+    <string name="LoginMaqta">مقطع تحصیلی : </string>
+    <string name="LoginReshte">رشته ی تحصیلی : </string>
+    <string name="LoginConfirm">ثبت نام</string>
+    <string name="Aboutme">این برنامه تماما توسط شیرکو فرجی طراحی و توسعه داده شده است.</string>
+    <string name="rahim">استاد ناظر : دکتر رحیم رشیدی</string>
+    <string name="maqta">لطفا مقطع تحصیلی خود را وارد کنید : </string>
+</resources>
