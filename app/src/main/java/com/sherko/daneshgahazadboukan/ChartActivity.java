@@ -83,6 +83,8 @@ public class ChartActivity extends AppCompatActivity {
             Toast.makeText(this, "مشکل اتصال دیتابیس", Toast.LENGTH_LONG).show();
         }
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("file:///android_asset/nonet.html");
+        webView.loadUrl("file:///android_asset/nochart.html");
         webView.loadUrl("https://docs.google.com/viewer?url="+strPdfUrl);
 
     }
