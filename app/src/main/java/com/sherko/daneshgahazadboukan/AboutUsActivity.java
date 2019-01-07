@@ -28,11 +28,7 @@ public class AboutUsActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
-        loadProfile loadProfile =new loadProfile();
-        TextView textView = findViewById(R.id.nameMeno);
-        TextView textView1 =findViewById(R.id.maqtaeMeno);
-        TextView textView2 =findViewById(R.id.reshteMeno);
-        loadProfile.all(this,textView,textView1,textView2);
+
 
     }
     public void clkBarnama(View view){

@@ -35,10 +35,7 @@ public class LoginFormActivity extends AppCompatActivity implements AdapterView.
         File db = new File(this.getDatabasePath(DB_NAME).getPath());
         if (db.exists()) {
             mDbHelper.open();
-           // Cursor C;
             C = mDbHelper.getTestData("select * from login");
-
-           // mDbHelper.UpdateTest("INSERT INTO login (id,name,lastname,phone,maqta,reshte) VALUES ("+String.valueOf(C.getCount()+1) +",'"+ fn.getText()+"' ,'" +fln.getText() + "' ,'"+fph.getText() +"','"+strMaqta+"','"+String.valueOf(strIdReshta)+"')");
             mDbHelper.close();
         } else {
             File dir = new File(db.getParent());

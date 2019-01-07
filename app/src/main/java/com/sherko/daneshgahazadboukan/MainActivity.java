@@ -25,11 +25,6 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
-        loadProfile loadProfile =new loadProfile();
-        TextView textView = findViewById(R.id.nameMeno);
-        TextView textView1 =findViewById(R.id.maqtaeMeno);
-        TextView textView2 =findViewById(R.id.reshteMeno);
-        loadProfile.all(this,textView,textView1,textView2);
     }
     public void clkBarnama(View view){
         Intent barname = new Intent(MainActivity.this , BarnameActivity.class);
@@ -66,6 +61,5 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onFirstBackPressed() {
         Toast.makeText(getBaseContext(), "برای خروج دوباره کلیک کنید.", Toast.LENGTH_SHORT).show();
-
     }
 }

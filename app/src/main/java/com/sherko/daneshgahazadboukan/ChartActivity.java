@@ -1,7 +1,10 @@
 package com.sherko.daneshgahazadboukan;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,61 +34,67 @@ public class ChartActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
-        loadProfile loadProfile =new loadProfile();
-        TextView textView = findViewById(R.id.nameMeno);
-        TextView textView1 =findViewById(R.id.maqtaeMeno);
-        TextView textView2 =findViewById(R.id.reshteMeno);
-        loadProfile.all(this,textView,textView1,textView2);
-        ImageView imageView = findViewById(R.id.imgProfile);
+
 
         WebView webView = findViewById(R.id.webpdf);
-        TestAdapter mDbHelper = new TestAdapter(this);
-        mDbHelper.createDatabase();
-        File db = new File(this.getDatabasePath(DB_NAME).getPath());
-        if (db.exists()) {
-            mDbHelper.open();
-            Cursor C;
-            C=mDbHelper.getTestData("select * from login");
-            int intCasePdfChart = Integer.parseInt(C.getString(4));
-            C = mDbHelper.getTestData("select * from reshte where id=" + C.getString(5));
-            switch (intCasePdfChart){
-                case 0:{
-                    strPdfUrl =C.getString(8);
-                    break;
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+
+
+
+        if (cm.getActiveNetworkInfo()!= null){
+            TestAdapter mDbHelper = new TestAdapter(this);
+            mDbHelper.createDatabase();
+            File db = new File(this.getDatabasePath(DB_NAME).getPath());
+            if (db.exists()) {
+                mDbHelper.open();
+                Cursor C;
+                C=mDbHelper.getTestData("select * from login");
+                int intCasePdfChart = Integer.parseInt(C.getString(4));
+                C = mDbHelper.getTestData("select * from reshte where id=" + C.getString(5));
+                switch (intCasePdfChart){
+                    case 0:{
+                        strPdfUrl =C.getString(8);
+                        break;
+                    }
+                    case 1:{
+                        strPdfUrl = C.getString(9);
+                        break;
+                    }
+                    case 2:{
+                        strPdfUrl = C.getString(11);
+                        break;
+                    }
+                    case 3:{
+                        strPdfUrl = C.getString(10);
+                        break;
+                    }
+                    case 4:{
+                        strPdfUrl = C.getString(12);
+                        break;
+                    }
+                    case 5:{
+                        strPdfUrl = C.getString(13);
+                        break;
+                    }
                 }
-                case 1:{
-                    strPdfUrl = C.getString(9);
-                    break;
+                mDbHelper.close();
+            } else {
+                File dir = new File(db.getParent());
+                if (!dir.exists()) {
+                    dir.mkdirs();
                 }
-                case 2:{
-                    strPdfUrl = C.getString(11);
-                    break;
-                }
-                case 3:{
-                    strPdfUrl = C.getString(10);
-                    break;
-                }
-                case 4:{
-                    strPdfUrl = C.getString(12);
-                    break;
-                }
-                case 5:{
-                    strPdfUrl = C.getString(13);
-                    break;
-                }
+                Toast.makeText(this, "مشکل اتصال دیتابیس", Toast.LENGTH_LONG).show();
             }
-            mDbHelper.close();
-        } else {
-            File dir = new File(db.getParent());
-            if (!dir.exists()) {
-                dir.mkdirs();
+            webView.getSettings().setJavaScriptEnabled(true);
+            if(strPdfUrl==null){
+                webView.loadUrl("file:///android_asset/nochart.html");
+            }else {
+                webView.loadUrl("https://docs.google.com/viewer?url="+strPdfUrl);
             }
-            Toast.makeText(this, "مشکل اتصال دیتابیس", Toast.LENGTH_LONG).show();
+        }else{
+            webView.loadUrl("file:///android_asset/nonet.html");
         }
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("file:///android_asset/nonet.html");
-        webView.loadUrl("file:///android_asset/nochart.html");
-        webView.loadUrl("https://docs.google.com/viewer?url="+strPdfUrl);
+
 
     }
     public void clkBarnama(View view){
