@@ -20,13 +20,11 @@ public class feregment_meno extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.layout_meno,container,false);
-
         final Context context = rootView.getContext();
         final TextView txtName = rootView.findViewById(R.id.txtName);
         final TextView txtMaqtae = rootView.findViewById(R.id.txtMaqtae);
         final TextView txtReshte = rootView.findViewById(R.id.txtReshte);
         txtName.setText("55");
-            //imgProfile.set
             TestAdapter mDbHelper = new TestAdapter(context);
             mDbHelper.createDatabase();
             File db = new File(context.getDatabasePath(DB_NAME).getPath());
